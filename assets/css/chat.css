@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+
+.chat-container {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 3em 2em;
+}
+
+.messages-container {
+    flex: 1;
+    width: 50%;
+    overflow: auto;
+    color: black;
+    border: solid 1px black;
+    padding: 0 1em;
+}
+
+.message {
+    font-size: 1em;
+}
+
+.tick {
+    font-size: .5em;
+    color: lightblue;
+}
+
+.form {
+    width: 50%;
+    margin-top: 2em;
+}

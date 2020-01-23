@@ -1,0 +1,31 @@
+<div class="chat-container">
+    <header>
+        <h1>Distributed Chat using Phoenix LiveView & Elixir</h1>
+    </header>
+
+    <%# Messages %>
+    <div class="messages-container">
+        <%= for message <- @messages do %>
+        <%= case message do %>
+        <%= %{body: "### TICK ###"} -> %>
+        <div class="tick"><%= message.body %></div>
+        <%= %{body: _} -> %>
+        <div class="message"><%= message.body %></div>
+        <% end %>
+        <% end %>
+    </div>
+
+    <%# Input %>
+    <form class="form" phx-submit="new:msg">
+        <input
+            type="text"
+            id="messageInput"
+            autocomplete="off"
+            name="message"
+            phx-hook="MessageInput"
+            data-input_value="<%= @input_value %>"
+        />
+        </div>
+    </form>
+
+</div>

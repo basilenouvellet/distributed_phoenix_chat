@@ -10,6 +10,9 @@ defmodule DistributedPhoenixChatWeb.Endpoint do
     signing_salt: "rP7llo5i"
   ]
 
+  # Phoenix LiveView
+  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+
   socket "/socket", DistributedPhoenixChatWeb.UserSocket,
     websocket: true,
     longpoll: false
